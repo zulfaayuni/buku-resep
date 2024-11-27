@@ -1,0 +1,846 @@
+html,body{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.navbar {
+    position: fixed;
+    max-width: 100%;  /* Agar navbar mengikuti lebar layar */
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    padding: 0.5rem 1rem; /* Menyesuaikan padding navbar */
+    margin-bottom: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+}
+
+.navbar-collapse {
+    overflow: visible !important;
+}
+
+.navbar-toggler {
+  border: none;
+  width: auto;
+  padding: 0;
+  margin: 8px 0 0 0; /* Menambahkan jarak di atas */
+}
+.navbar-toggler-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+/* 
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-list' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z'/%3E%3C/svg%3E");
+} */
+
+.nav-link {
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.nav-link.active {
+    color: #FFFFFF !important;
+    border-bottom: 2px solid white;
+}
+
+.nav-link:hover {
+    color: #FF9D3D;
+}
+
+.navbar-scroll {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-scrolled {
+    background-color: #FF9D3D;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' class='bi bi-list' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z'/%3E%3C/svg%3E");
+}
+
+.home-container{
+  background-image: url('assets/bg1.jpg');
+  background-size: cover;
+  position: relative;
+  padding-top: 70px;
+}
+ /* Hilangkan ruang kosong antara navbar dan konten */
+ #home {
+  padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+  margin-top: 0;
+}
+
+/* Menghapus margin dan padding di body untuk menghindari ruang kosong */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Responsif gambar */
+#home .col-lg-6 img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Untuk tampilan mobile dan tablet */
+@media (max-width: 768px) {
+  #home {
+      padding-top: 100px; /* Menyesuaikan untuk tampilan mobile */
+  }
+}
+
+.home-container img {
+  max-width: 100%;  /* Pastikan gambar tidak lebih besar dari kontainer */
+  height: auto; /* Menjaga rasio aspek gambar */
+}
+.text-warning {
+  color: #FF9D3D !important;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+
+.dropdown-menu {
+  pointer-events: auto; /* Memastikan dropdown bisa diklik */
+}
+
+/*garis line*/
+.line-left, .line-right {
+    border: none;
+    height: 2px;
+    background-color: #FF9D3D;
+    width: 5%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.line-left {
+    margin-right: 15px;
+}
+
+.line-right {
+    margin-left: 15px;
+}
+
+.border-star{
+    color: #FF9D3D;
+}
+
+/* btn untuk card resep  */
+.btn-success{
+  background-color: #FF9D3D !important;
+  outline: none;
+  border: none;
+  color: #000;
+ 
+}
+
+.btn-primary {
+  background-color: #FF9D3D !important;
+  outline: none;
+  border: none;
+  color: #000;
+}
+
+
+/* card resep  */
+.recipe-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 100%; /* Membuat card tetap dalam proporsi yang rapi */
+  width: 100%; /* Memastikan card memenuhi lebar kolom grid */
+  
+}
+
+.recipe-card img {
+  width: 100%; /* Pastikan gambar memenuhi lebar card */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: auto; /* Menjaga proporsi gambar */
+}
+
+.recipe-card .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.recipe-card .card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.recipe-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* Menambahkan padding responsif pada card */
+@media (max-width: 576px) {
+  .recipe-card {
+    padding: 10px; /* Menambah jarak padding pada card kecil */
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .recipe-card {
+    padding: 15px; /* Menyesuaikan padding untuk layar medium */
+  }
+}
+
+@media (min-width: 768px) {
+  .recipe-card {
+    padding: 20px; /* Menambah padding pada layar besar */
+  }
+}
+
+
+.card-text {
+  text-align: center; /* Pastikan ratingnya berada di tengah secara horizontal */
+  font-size: 18px;
+  color: #FF9D3D; /* Sesuaikan dengan warna rating yang diinginkan */
+}
+
+
+.modal-header{
+  border: none;
+}
+
+#modalRecipe {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+#modalImageContainer {
+  flex: 1; /* Gambar mengambil setengah ruang */
+}
+
+#modalTextContainer {
+  flex: 2; /* Konten teks mengambil lebih banyak ruang */
+  max-width: 500px;
+  overflow-y: auto;
+}
+
+#modalRecipeImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Style untuk ul dan p dalam modal */
+#modalIngredientsList, #modalInstructionsList {
+  padding-left: 20px;
+}
+
+
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#modalRecipeImage {
+  border-radius: 5px;
+}
+
+.recipe-card {
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+/* nav tab di dalam modal  */
+/* Jarak antara nav-tabs dan konten di bawahnya */
+.nav-tabs {
+ border: none;
+}
+
+/* Styling untuk tab */
+.nav-pills .nav-item .nav-link {
+  background-color: #FFFFFF; /* Warna latar belakang tab */
+  color: #333 !important; /* Warna teks default */
+  border-radius: 50px; /* Membuat tab menjadi bulat */
+  margin: 0 5px; /* Memberikan jarak antar tab */
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  justify-content: center; /* Menyelaraskan teks di tengah */
+  border: 1px solid #FF9D3D; /* Border oranye pada tab */
+  box-shadow: none;
+}
+
+/* Tampilan tab aktif */
+.nav-pills .nav-item .nav-link.active {
+  background-color: #FF9D3D; /* Warna latar belakang tab aktif (oranye) */
+  color: #fff !important; /* Teks aktif menjadi putih */
+  border: 1px solid #FF9D3D; /* Menambahkan border oranye pada tab aktif */
+}
+
+/* Hover efek pada tab */
+.nav-pills .nav-item .nav-link:hover {
+  background-color: #FF9D3D; /* Warna latar belakang saat hover */
+  color: #fff !important; /* Teks tetap putih saat hover */
+  border: 1px solid #FF9D3D; /* Menambahkan border oranye saat hover */
+}
+
+/* Jika perlu menambahkan jarak pada konten di bawah tab */
+.tab-content {
+  padding-top: 20px; /* Menambahkan jarak di atas konten tab */
+}
+
+
+
+/* gallery  */
+.col-md-6 {
+  min-height: 200px; /* Menentukan tinggi minimum */
+  max-width: 100%; /* Membatasi lebar maksimum */
+}
+
+   
+
+.transformed-image {
+  width: 100%; /* Membuat gambar memenuhi lebar kolom */
+  height: 100%; /* Mempertahankan rasio aspek */
+  object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+}
+
+/* CSS untuk transformasi gambar di luar modal */
+.transformed-image {
+  transition: transform 0.2s; /* Menambahkan transisi untuk efek transformasi */
+  /* Anda juga bisa mengatur max-width dan height untuk menjaga ukuran gambar */
+  max-width: 100%; /* Pastikan gambar tidak lebih lebar dari wadahnya */
+  height: auto; /* Menjaga proporsi gambar */
+}
+
+.transformed-image:hover {
+  transform: scale(1.05); /* Ubah ukuran gambar saat di-hover menjadi lebih kecil */
+}
+
+/* Menghilangkan border atau garis pada konten modal */
+.modal-content {
+  border: none !important; /* Menghilangkan border pada modal */
+  box-shadow: none !important; /* Menghilangkan bayangan pada modal */
+  background-color: transparent !important; /* Menghilangkan background pada modal */
+}
+
+/* Menghilangkan border atau garis pada gambar di dalam modal */
+.modal-body img {
+  border: none !important; /* Menghilangkan border pada gambar */
+  box-shadow: none !important; /* Menghilangkan bayangan pada gambar */
+  outline: none !important; /* Menghilangkan outline pada gambar */
+  max-width: 90%; /* Menyesuaikan lebar gambar */
+  max-height: 80vh; /* Membatasi tinggi gambar agar tidak melebihi 80% dari tinggi tampilan */
+  object-fit: contain; /* Menjaga gambar tetap proporsional */
+}
+/* Mempercepat animasi modal */
+.modal.fade .modal-dialog {
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+/* #gallery{
+  background-image: url(assets/gallery.jpeg);
+} */
+  
+.parallax {
+  background-image: url('assets/gallery.jpeg'); /* Ganti dengan path gambar yang diunggah */
+  background-attachment: fixed; /* Ini menciptakan efek parallax */
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar */
+  background-size: cover; /* Pastikan gambar mengisi area */
+}
+
+
+
+/*testimoni*/
+
+.card {
+  min-height: 400px; /* Set minimum height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced evenly */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Fills the entire card */
+  align-items: center;
+}
+p {
+  text-align: center;
+  flex-grow: 1; /* Makes sure paragraph takes available space */
+}
+
+/*swiper testimoni               */
+.swiper-slide {
+  display: flex;
+  justify-content: center; /* Pusatkan card */
+  align-items: stretch; /* Buat semua card setinggi mungkin */
+   align-items: flex-start; /* Ubah dari stretch menjadi flex-start */
+}
+
+  .swiper-container {
+  margin: 0;
+  padding: 0;
+  position: relative; /* Pastikan ini ada agar child bisa diposisikan dengan absolute */
+  height: auto; /* Pastikan tingginya auto agar menyesuaikan konten */
+ }
+
+
+  .swiper-pagination {
+      position: absolute !important;
+      top: 515px !important; /* Atur jarak dari atas */
+      left: 50% !important; /* Pusatkan secara horizontal */
+      transform: translateX(-50%) !important; /* Pusatkan dengan transformasi */
+      z-index: 10 !important; /* Pastikan di atas slide */
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;  /* Atur jarak dari atas */
+      margin-bottom: 20px; /* Atur jarak dari bawah */
+      background-color: #FF9D3D;
+  }
+  
+    .mySwiper .swiper-pagination-bullet {
+      background: #FF9D3D !important; /* Mengubah warna bullet menjadi oranye */
+      opacity: 0.6;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 0 4px;
+  }
+
+  .mySwiper .swiper-pagination-bullet-active {
+      opacity: 1;
+      background: #FF9D3D !important; /* Mengubah bullet aktif menjadi oranye */
+  }
+
+ 
+      .swiper-slide .card {
+        display: flex;    
+        width: 100%;
+        flex-direction: column; /* Susun elemen secara vertikal */
+        max-width: 500px; /* Menyesuaikan ukuran card */
+        margin: 15px auto; /* Agar card selalu berada di tengah */
+        padding: 20px; /* Memberikan ruang di 
+        background-color: ;lam card */
+        border-radius: 10px; /* Membuat sudut melengkung */
+        background-color: white; /* Warna latar belakang putih terang */
+      
+        margin-bottom: 0;
+      }
+      
+      .swiper-slide .card-body {
+        text-align: center;
+        
+      }
+      
+      .swiper-slide .card img {
+        margin-bottom: 15px;
+        width: 100px;
+        height: 100px;
+      }
+      
+      .swiper-slide .stars {
+        margin-top: 10px;
+        color: #f39c12; /* Warna bintang */
+      }
+      
+      .swiper-slide h5 {
+        font-size: 18px;
+        margin-top: 15px;
+      }
+      
+      .swiper-slide p {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #777;
+        line-height: 1.6;
+      }
+      
+      .swiper-slide .card:hover .card-body,
+      .swiper-slide .card:hover .stars i,
+      .swiper-slide .card:hover h5,
+      .swiper-slide .card:hover p {
+        color: #ffffff !important; /* Ubah semua teks dan ikon bintang menjadi putih */
+      }
+      .swiper-slide .card:hover {
+          background-color: #FF9D3D; /* Warna latar belakang saat hover */
+          color: white; /* Warna teks saat hover */
+      }
+  
+
+
+
+
+
+/*contact */
+.map-responsive {
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  position: relative;
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+  
+.btn-primary{
+  background-color: #FF9D3D !important;
+  text-align: center;
+}
+.card-contact {
+  background-color: #FFFFFF;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card-contact:hover {
+  background-color: #FF9D3D;
+  color: white;
+}
+
+.card-contact:hover a,
+.card-contact:hover i,
+.card-contact:hover h5,
+.card-contact:hover p {
+  color: white !important;
+}
+
+  
+
+
+/* faaq */
+  #faq {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+  }
+
+
+.accordion-button {
+    background-color: #FF9D3D;
+    color: #000;
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #FF9D3D;
+    color: #000;
+}
+
+.accordion-body {
+    background-color: white;
+}
+
+.accordion-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Untuk gambar gallery */
+.gallery-img {
+  max-height: 200px; /* Ubah sesuai keinginan untuk mengatur tinggi maksimal */
+  object-fit: cover; /* Menjaga gambar tetap proporsional tanpa melar */
+  width: 100%;
+  border-radius: 8px; /* Membuat sudut gambar sedikit membulat */
+}
+
+/* contact  */
+.card-contact {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 40px; /* Set minimum height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced evenly */
+
+}
+.social-icons a {
+  margin: 0 10px;
+  font-size: 30px;
+  color: #FF9D3D;
+}
+.contact-form input, .contact-form textarea {
+  border-radius: 8px;
+}
+.cta-section button {
+  border-radius: 8px;
+  background-color: #FF9D3D;
+  color: white;
+} 
+.card h5 {
+  font-size: 1rem; /* Ukuran font lebih kecil */
+}
+
+.card p {
+  font-size: 0.875rem; /* Ukuran font untuk paragraf */
+}
+
+.card-contact {
+  text-align: center;
+  border-radius: 10px;  /* Membuat sudut card lebih melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan ringan pada card */
+}
+
+.card-contact i {
+  color: #FF9D3D;  /* Warna ikon */
+  font-size: 36px;  /* Ukuran ikon lebih besar */
+}
+
+.card-contact h5 {
+  margin-top: 10px;  /* Memberikan jarak antara ikon dan judul */
+  font-weight: bold;
+}
+
+.card-contact p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* footer  */
+.footer{
+  background-color: #FF9D3D;
+}
+
+/* responsif home  */
+@media (max-width: 992px) { /* Tablet */
+  .home-container .col-lg-6.text-center.text-lg-end {
+      text-align: center; /* Pastikan teks di tengah */
+  }
+
+  .home-container .col-lg-6 img {
+      margin-left: auto; /* Mengatur margin kiri otomatis */
+      margin-right: auto; /* Mengatur margin kanan otomatis */
+      display: block; /* Mengubah gambar menjadi block untuk margin */
+      width: 80%; /* Mengatur lebar gambar jika perlu */
+  }
+}
+
+  
+   /* Responsive navbar*/
+   @media (max-width: 768px) {
+    .navbar-nav .nav-item {
+        padding: 5px 0; /* Sesuaikan jarak antar link */
+    }
+}
+
+  
+@media (max-width: 576px) {
+  .navbar-brand {
+      font-size: 1.5rem;
+      padding: 0;
+      margin-right: auto;
+  }
+  .navbar-toggler {
+      padding: 0.25rem 0.5rem;
+      margin-left: auto;
+  }
+}
+
+
+
+
+.uniform-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 400px; /* Sesuaikan tinggi minimal sesuai kebutuhan */
+  max-width: 400px; /* Atur lebar maksimum yang sama */
+  border-top: 5px solid #5a9bd4;
+  border-bottom: 5px solid #5a9bd4;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.uniform-card h3 {
+  font-size: 2rem;
+  color: #5a9bd4;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.uniform-card p, .uniform-card input, .uniform-card textarea, .uniform-card button {
+  font-size: 1.3rem;
+  color: #5a9bd4;
+}
+
+/* Button styling */
+.uniform-card button {
+  background-color: #5a9bd4;
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.uniform-card .form-control {
+  border: 1px solid #5a9bd4;
+}
+
+
+
+/*testimoni */
+/* Responsif untuk Mobile (max-width 576px) */
+@media (max-width: 576px) {
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+    .swiper-pagination-bullet-active {
+        width: 10px;
+    }
+}
+
+/* Responsif untuk Tablet (max-width 768px) */
+@media (max-width: 768px) {
+    .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+    }
+    .swiper-pagination-bullet-active {
+        width: 11px;
+    }
+}
+
+/* Untuk tampilan Desktop */
+@media (min-width: 769px) {
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+    .swiper-pagination-bullet-active {
+        width: 12px;
+    }
+}
+
+  /* Kurangi padding di layar kecil */
+  @media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 0; /* mengurangi padding */
+    }
+}
+
+/* Responsif about*/
+@media (max-width: 768px) {
+  .row.g-2 {
+      gap: 1rem; /* Gap lebih kecil pada mobile */
+  }
+
+  .col-12 {
+      margin-left: 5px; 
+      margin-right: 5px;
+  }
+
+  .d-flex {
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+}
+
+ /* responsif gallery  */
+/* Responsif untuk layar tablet dan ponsel */
+@media (max-width: 992px) {
+  .gallery-img {
+      max-height: 200px; /* Menyesuaikan tinggi gambar pada layar sedang */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-img {
+      max-height: 150px; /* Menyesuaikan tinggi gambar pada layar kecil */
+  }
+}
+
+
+/* responsif modals repices */
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .nav-tabs {
+      flex-direction: column; 
+      text-align: center;
+  }
+
+  .nav-tabs .nav-item {
+      margin-bottom: 5px;
+  }
+
+  .nav-tabs .nav-link {
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+}
+
+/* Responsif untuk layar menengah */
+@media (max-width: 992px) {
+  .nav-tabs {
+    flex-direction: column; /* Mengatur tab dalam satu kolom */
+    text-align: center;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: 5px;
+}
+
+.nav-tabs .nav-link {
+    font-size: 14px; /* Mengurangi ukuran teks untuk layar kecil */
+    padding: 8px 12px;
+}
+}
+
+
+/* Tampilan default untuk layar desktop */
+@media (min-width: 992px) {
+  .nav-tabs {
+      flex-direction: row; /* Tetap horizontal di layar besar */
+  }
+}

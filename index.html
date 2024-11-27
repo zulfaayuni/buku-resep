@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Cards</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <!-- Link CSS AOS -->
+   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+   <!-- google font poppins  -->
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+   <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<header class="bg-header fs-5">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container px-2">
+            <!-- Navbar Brand / Logo -->
+            <a class="navbar-brand fw-bold fs-2" href="#" style="color: white; font-family: 'Roboto', sans-serif;">Resep Rasa</a>
+            
+            <!-- Navbar Toggler (Hamburger) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item px-3">
+                        <a class="nav-link text-white" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link text-white" href="#about">About</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link text-white" href="#recipes">Recipes</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link text-white" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link text-white" href="#testimonial">Testimoni</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link text-white" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link text-white" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    
+    
+    
+    <main data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example rounded-2" tabindex="0">
+    <!--section home -->
+    <section id="home" class="home-container bg-dark py-5" style="height: 100%;">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-12 col-lg-6 text-start mb-4 mb-lg-0" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-out-cubic" data-aos-delay="200">
+                <h1 class="display-4 fw-bold mb-3">
+                    <span class="text-white">Taste Recipes, Discover the Magic in </span> <br>
+                    <span style="color: #FF9D3D;">Every Dish</span>
+                </h1>
+                <p class="text-white text-start mb-4">"Cooking is an art, taste is a story. Explore recipes that will bring warmth and happiness to your dining table."</p>
+            </div>
+
+            <!-- Image Section -->
+            <div class="col-12 col-lg-6 text-center text-lg-end mt-4 mt-lg-0 mb-4" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-out-cubic" data-aos-delay="500">
+                <img class="img-fluid rounded w-75" src="assets/hero.png" alt="Sarong Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    
+
+     <!--section about -->
+     <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <!-- Section Gambar -->
+                <div class="col-12 col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6" data-aos="zoom-in" data-aos-duration="1000">
+                            <img class="img-fluid rounded w-100" src="assets/bout2.jpg" alt="Image 1">
+                        </div> 
+                        
+                        <div class="col-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <img class="img-fluid rounded w-75" src="assets/bout1.jpg" alt="Image 2" style="margin-top: 25%;">
+                        </div>
+                        
+                        <div class="col-6" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+                            <img class="img-fluid rounded w-75" src="assets/bout4.jpg" alt="Image 3" style="margin-left: 25%;">
+                        </div>
+                        
+                        <div class="col-6" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                            <img class="img-fluid rounded w-100" src="assets/bout3.jpg" alt="Image 4">
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- Section Teks "Welcome to" -->
+                <div class="col-12 col-lg-6">
+                    <h5 class="mb-4" style="color: #FF9D3D;" data-aos="fade-right" data-aos-duration="1000">About Us</h5>
+                    <h1 class="mb-4" data-aos="fade-left" data-aos-duration="1000">Taste<span style="color: #FF9D3D;"> Recipe</span></h1>
+                    <p class="text-start" data-aos="fade-up" data-aos-duration="1000">"At Resep Rasa, we are passionate about bringing authentic Indonesian flavors to your kitchen. Our mission is to preserve the rich culinary heritage of Indonesia by sharing traditional recipes that have been cherished for generations. Each dish featured on our site tells a story—one of culture, family, and a deep love for the diverse flavors that make Indonesian cuisine unique.</p>
+                    <p class="text-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">From iconic dishes like Rendang and Nasi Goreng to hidden gems from various islands, Resep Rasa is your gateway to a world of mouth-watering, homemade meals. Whether you're a seasoned cook or new to Indonesian cooking, our easy-to-follow recipes, cooking tips, and step-by-step guides are designed to make your culinary journey enjoyable and memorable.</p>
+                    <p class="text-start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Join us as we celebrate the vibrant flavors of Indonesia. Experience the joy of cooking and the delight of sharing a meal with loved ones—one delicious recipe at a time."</p>
+    
+                    <!-- Bagian Years of Experience dan Master Chefs -->
+                    <div class="row g-4 mt-4">
+                        <div class="col-12 col-lg-6 col-sm-6" data-aos="zoom-in" data-aos-duration="1000">
+                            <div class="d-flex align-items-center border-start border-5 border-primary px-3" style="border-color: #FFA500 !important;">
+                                <h1 class="display-5 fw-bold mb-0" style="color: #FF9D3D;">15</h1>
+                                <div class="ps-3">
+                                    <p class="mb-0">Years of</p>
+                                    <h6 class="text-uppercase mb-0">Experience</h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-lg-6 col-sm-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                            <div class="d-flex align-items-center border-start border-5 border-primary px-3" style="border-color: #FFA500 !important;">
+                                <h1 class="display-5 fw-bold mb-0" style="color: #FF9D3D;">50</h1>
+                                <div class="ps-3">
+                                    <p class="mb-0">Popular</p>
+                                    <h6 class="text-uppercase mb-0">Master Chefs</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- section resep  -->
+    <section id="recipes" class="py-5">
+        <div class="container mt-5">
+            <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <hr class="line-left" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+                <h5 class="fw-bold d-inline-block mx-3" style="color: #FF9D3D;" data-aos="zoom-in" data-aos-duration="1200">Recipe Highlights</h5>
+                <hr class="line-right" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                <h1 class="text-muted fw-bold" style="color: black !important;" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="400">Discover Our Signature Recipes!</h1>
+            </div>
+    
+            <div class="row py-5" id="recipeContainer" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600" data-aos-easing="ease-in-out">
+                <!-- Card resep akan muncul di sini -->
+            </div>
+            <div class="text-center mt-4" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="800">
+                <button id="toggleBtn" class="btn btn-primary" onclick="toggleRecipes()">See More</button>
+            </div>
+        </div>
+    
+        <!-- Modal untuk detail resep -->
+        <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="modalRecipeTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" style="background-color: #FFFFFF; border-radius: 10px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 id="modalRecipeTitle" data-aos="flip-down" data-aos-duration="1000" data-aos-easing="ease-out-cubic">Recipe Title</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3" data-aos="fade-right" data-aos-duration="1000">
+                                <div id="modalImageContainer">
+                                    <img id="modalRecipeImage" src="https://via.placeholder.com/400" alt="Recipe Image" style="width: 100%; border-radius: 10px;">
+                                </div>
+                            </div>
+    
+                            <div class="col-md-6">
+                                <!-- Tabs Navigation -->
+                        
+                                <ul class="nav nav-pills nav-tabs justify-content-center" id="recipeTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active text-sm" id="ingredients-tab" data-bs-toggle="tab" href="#ingredients" role="tab">Ingredients</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link text-sm" id="instructions-tab" data-bs-toggle="tab" href="#instructions" role="tab">Instructions</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link text-sm" id="details-tab" data-bs-toggle="tab" href="#details" role="tab">Details</a>
+                                    </li>
+                                </ul>
+                                
+                                <!-- Tabs Content -->
+                                <div class="tab-content mt-3" id="recipeTabContent" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                    <div class="tab-pane fade show active" id="ingredients" role="tabpanel" data-aos="fade-right" data-aos-duration="800">
+                                        <ul id="modalIngredientsList"></ul>
+                                    </div>
+                                    <div class="tab-pane fade" id="instructions" role="tabpanel" data-aos="fade-up" data-aos-duration="800">
+                                        <ol id="modalInstructionsList"></ol>
+                                    </div>
+                                    <div class="tab-pane fade" id="details" role="tabpanel" data-aos="fade-left" data-aos-duration="800">
+                                        <p class="text-start"><strong>Prep Time:</strong> <span id="modalPrepTime"></span> minutes</p>
+                                        <p class="text-start"><strong>Cook Time:</strong> <span id="modalCookTime"></span> minutes</p>
+                                        <p class="text-start"><strong>Servings:</strong> <span id="modalServings"></span></p>
+                                        <p class="text-start"><strong>Difficulty:</strong> <span id="modalDifficulty"></span></p>
+                                        <p class="text-start"><strong>Cuisine:</strong> <span id="modalCuisine"></span></p>
+                                        <p class="text-start"><strong>Calories per Serving:</strong> <span id="modalCalories"></span></p>
+                                        <p class="text-start"><strong>Meal Type:</strong> <span id="modalMealType"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    <!-- section gallery -->
+    <section id="gallery" class="py-5 parallax">
+        
+        <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
+            <hr class="line-left"> 
+            <h5 class="fw-bold d-inline-block mx-3" style="color: #FF9D3D;" data-aos="fade-up" data-aos-duration="1000">Gallery Highlights</h5>
+            <hr class="line-right"> 
+            <h1 class="text-muted fw-bold" style="color: black !important;">Explore Our Amazing Gallery!</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Gambar 1 -->
+                <div class="col-md-4 mt-3" data-aos="flip-left" data-aos-duration="1000">
+                    <img src="assets/gallery1.webp" class="img-fluid transformed-image shadow" alt="Jus 1" data-bs-toggle="modal" data-bs-target="#imageModal1">
+                </div>
+                <!-- Gambar 2 -->
+                <div class="col-md-4 mt-3" data-aos="flip-right" data-aos-duration="1000">
+                    <img src="assets/gallery2.webp" class="img-fluid transformed-image shadow" alt="Jus 2" data-bs-toggle="modal" data-bs-target="#imageModal2">
+                </div>
+                <!-- Gambar 3 -->
+                <div class="col-md-4 mt-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="assets/gallery3.webp" class="img-fluid transformed-image shadow" alt="Jus 3" data-bs-toggle="modal" data-bs-target="#imageModal3">
+                </div>
+                <!-- Baris baru untuk Makanan -->
+                <div class="col-md-6 mt-3" data-aos="flip-left" data-aos-duration="1000">
+                    <img src="assets/galleryy4.jpg" class="img-fluid transformed-image shadow" alt="Makanan 1" data-bs-toggle="modal" data-bs-target="#imageModal4">
+                </div>
+                <div class="col-md-6 mt-3" data-aos="flip-right" data-aos-duration="1000">
+                    <img src="assets/gallery5.jpg" class="img-fluid transformed-image shadow" alt="Makanan 2" data-bs-toggle="modal" data-bs-target="#imageModal5">
+                </div>
+                <!-- Tambahan Gambar 6 hingga 9 -->
+                <div class="col-md-3 mt-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="assets/gallery6.webp" class="img-fluid transformed-image shadow" alt="Jus 2" data-bs-toggle="modal" data-bs-target="#imageModal6">
+                </div>
+                <div class="col-md-3 mt-3" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="assets/gallery7.webp" class="img-fluid transformed-image shadow" alt="Jus 4" data-bs-toggle="modal" data-bs-target="#imageModal7">
+                </div>
+                <div class="col-md-3 mt-3" data-aos="flip-left" data-aos-duration="1000">
+                    <img src="assets/gallery8.webp" class="img-fluid transformed-image shadow" alt="Jus 1" data-bs-toggle="modal" data-bs-target="#imageModal8">
+                </div>
+                <div class="col-md-3 mt-3" data-aos="flip-right" data-aos-duration="1000">
+                    <img src="assets/gallery9.webp" class="img-fluid transformed-image shadow" alt="Jus 3" data-bs-toggle="modal" data-bs-target="#imageModal9">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal gallery 1 -->
+        <div class="modal fade transparant" id="imageModal1" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background: none; box-shadow: none;">
+                    <div class="modal-header" style="border: none;">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white !important; filter: brightness(0) invert(1);"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/gallery1.webp" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal gallery 2-->
+        <div class="modal fade transparant" id="imageModal2" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background: none; box-shadow: none;">
+                    <div class="modal-header" style="border: none;">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white !important; filter: brightness(0) invert(1);"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/gallery2.webp" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal gallery 3-->
+        <div class="modal fade transparant" id="imageModal3" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background: none; box-shadow: none;">
+                    <div class="modal-header" style="border: none;">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white !important; filter: brightness(0) invert(1);"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/gallery3.webp" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal gallery 4-->
+        <div class="modal fade transparant" id="imageModal4" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background: none; box-shadow: none;">
+                    <div class="modal-header" style="border: none;">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white !important; filter: brightness(0) invert(1);"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/gallery4.webp" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal gallery 5-->
+        <div class="modal fade transparant" id="imageModal5" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background: none; box-shadow: none;">
+                    <div class="modal-header" style="border: none;">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white !important; filter: brightness(0) invert(1);"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/gallery5.jpg" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal gallery 6-->
+        <div class="modal fade transparant" id="imageModal6" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background: none; box-shadow: none;">
+                    <div class="modal-header" style="border: none;">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white !important; filter: brightness(0) invert(1);"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/gallery6.webp" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal gallery 7-->
+        <div class="modal fade transparant" id="imageModal7" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background: none; box-shadow: none;">
+                    <div class="modal-header" style="border: none;">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white !important; filter: brightness(0) invert(1);"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/gallery7.webp" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal gallery 8-->
+        <div class="modal fade transparant" id="imageModal8" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background: none; box-shadow: none;">
+                    <div class="modal-header" style="border: none;">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white !important; filter: brightness(0) invert(1);"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/gallery8.webp" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal gallery 9-->
+        <div class="modal fade transparant" id="imageModal9" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="background: none; box-shadow: none;">
+                    <div class="modal-header" style="border: none;">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: white !important; filter: brightness(0) invert(1);"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="assets/gallery9.webp" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--section testimoni-->
+     <section id="testimonial" style="padding: 50px 0; background-color: #FFFFFF; position: relative; overflow: hidden;">
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
+                <hr class="line-left"> 
+                <h5 class="fw-bold d-inline-block mx-3" style="color: #FF9D3D;" data-aos="fade-up" data-aos-duration="1000">Testimoni</h5>
+                <hr class="line-right"> 
+                <h1 class="text-muted fw-bold" style="color: black !important;">What Our Customers Say !</h1>
+                <p></p>
+            </div>
+            
+            <div class="swiper mySwiper" data-aos="fade-up" data-aos-duration="1000">
+                <div class="swiper-wrapper">
+                    <!-- Each swiper-slide will have its own AOS effect with delay -->
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="assets/moni2.jpg" alt="Rina Sari" class="rounded-circle" width="100" height="100">
+                                <h5 class="mt-3"> Sarah, Culinary Enthusiast</h5>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="mt-3">"Every dish at Resep Rasa brings back sweet memories! Authentic recipes full of original flavors, truly a delight for my taste buds. I’ll definitely be back!"</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="assets/moni1.jpg" alt="Andi Wijaya" class="rounded-circle" width="100" height="100">
+                                <h5 class="mt-3">David, Food Lover</h5>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="mt-3">"Not only delicious but Resep Rasa also provides an amazing culinary experience. Every recipe is served with great attention and unbeatable flavors!"</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="assets/moni4.jpg" alt="Dewi Anggraeni" class="rounded-circle" width="100" height="100">
+                                <h5 class="mt-3">Maya, Homemaker</h5>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="mt-3">"I’ve found so many new recipes that are easy to follow and, of course, delicious! Resep Rasa is the culinary inspiration I’ve always been looking for."</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="assets/moni5.jpg" alt="Fajar Rizky" class="rounded-circle" width="100" height="100">
+                                <h5 class="mt-3">Rudi, Hobby Chef</h5>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="mt-3">"Resep Rasa is the perfect place for anyone looking to discover new flavors in their kitchen. Thank you for providing such wonderful recipes!"</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="assets/moni6.jpg" alt="Nina Widya" class="rounded-circle" width="100" height="100">
+                                <h5 class="mt-3"> Lina, Cooking Enthusiast</h5>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="mt-3">"After trying various recipes from Resep Rasa, I feel like a professional chef at home! The recipes are easy to understand and always result in satisfying dishes."</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <img src="assets/moni3.jpg" alt="Maria Lestari" class="rounded-circle" width="100" height="100">
+                                <h5 class="mt-3"> Ari, Student</h5>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="mt-3">"This website always delivers simple recipes that result in delicious dishes! Resep Rasa has made me more confident in the kitchen."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- section faq  -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <div class="text-center mb-4" data-aos="fade-up" data-aos-duration="1000">
+                <hr class="line-left">
+                <h5 class="fw-bold d-inline-block mx-3" style="color: #FF9D3D;">Help & Support</h5>
+                <hr class="line-right">
+                <h1 class="text-muted fw-bold" style="color: black !important;">Got Questions? We’ve Got Answers!</h1>
+            </div>
+    
+            <div class="row">
+                <!-- FAQ Accordion -->
+                <div class="col-lg-6 py-5" data-aos="fade-right">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- Accordion Items 1-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: #FF9D3D; color: #fff;">
+                                    Apa itu website Rasa?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Website Rasa adalah platform yang menyediakan berbagai resep masakan dari berbagai belahan dunia. Kami bertujuan untuk membantu Anda menemukan dan mencoba resep baru yang lezat.
+                                </div>
+                            </div>
+                        </div>
+                          <!-- Accordion Items 2-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color: #FF9D3D; color: #fff;">
+                                    Bagaimana cara menggunakan website Rasa?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Anda dapat menjelajahi resep kami melalui menu kategori atau menggunakan fitur pencarian untuk menemukan resep spesifik. Setelah menemukan resep yang Anda sukai, klik untuk melihat detailnya.
+                                </div>
+                            </div>
+                        </div>
+                          <!-- Accordion Items 3-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color: #FF9D3D; color: #fff;">
+                                    Apakah saya perlu mendaftar untuk menggunakan website ini?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Tidak, Anda tidak perlu mendaftar untuk mengakses resep di website Rasa. Namun, jika Anda ingin menyimpan resep favorit Anda, kami menyarankan Anda untuk membuat akun.
+                                </div>
+                            </div>
+                        </div>
+                          <!-- Accordion Items 4-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="background-color: #FF9D3D; color: #fff;">
+                                    Dapatkah saya mengirimkan resep saya sendiri?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Tentu saja! Kami selalu mencari resep baru untuk ditambahkan ke website kami. Anda dapat mengirimkan resep Anda melalui formulir pengiriman yang tersedia di website kami.
+                                </div>
+                            </div>
+                        </div>
+                          <!-- Accordion Items 5-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="background-color: #FF9D3D; color: #fff;">
+                                    Apakah resep di website Rasa gratis?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ya, semua resep di website Rasa dapat diakses secara gratis. Kami percaya bahwa memasak harus menyenangkan dan dapat diakses oleh semua orang.
+                                </div>
+                            </div>
+                        </div>
+                          <!-- Accordion Items 6-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="background-color: #FF9D3D; color: #fff;">
+                                    Apakah Resep Rasa menyediakan tips dan trik memasak?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ya, kami juga memiliki artikel yang berisi tips dan trik memasak untuk membantu Anda mendapatkan hasil yang maksimal, mulai dari memilih bahan yang tepat hingga teknik memasak yang efektif.
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Accordion Item 7 -->
+                        <!-- <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" style="background-color: #FF9D3D; color: #fff;">
+                                    Apakah Resep Rasa menyediakan tips dan trik memasak?
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ya, kami juga memiliki artikel yang berisi tips dan trik memasak untuk membantu Anda mendapatkan hasil yang maksimal, mulai dari memilih bahan yang tepat hingga teknik memasak yang efektif.
+                                </div>
+                            </div>
+                        </div> -->
+    
+                        <!-- Accordion Item 8 -->
+                        <!-- <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingEight">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" style="background-color: #FF9D3D; color: #fff;">
+                                    Apakah Resep Rasa menyediakan tips dan trik memasak?
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ya, kami juga memiliki artikel yang berisi tips dan trik memasak untuk membantu Anda mendapatkan hasil yang maksimal, mulai dari memilih bahan yang tepat hingga teknik memasak yang efektif.
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+    
+                <!-- Image Section -->
+                <div class="col-lg-6 py-5">
+                    <div class="row g-2 justify-content-center">
+                        <!-- Gambar 1 -->
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 text-center" data-aos="zoom-in" data-aos-duration="1000">
+                            <img class="gallery-img img-fluid rounded w-100" src="assets/gallery1.webp" alt="Gallery 1">
+                        </div>
+                        <!-- Gambar 2 -->
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <img class="gallery-img img-fluid rounded w-100" src="assets/gallery4.webp" alt="Gallery 4">
+                        </div>
+                        <!-- Gambar 3 -->
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 text-center" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+                            <img class="gallery-img img-fluid rounded w-100" src="assets/gallery5.jpg" alt="Gallery 5">
+                        </div>
+                        <!-- Gambar 4 -->
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">
+                            <img class="gallery-img img-fluid rounded w-100" src="assets/gallery8.webp" alt="Gallery 8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--section contact-->
+    <section id="contact" class="container py-5">
+            <!-- Contact Section -->
+        <div class="container my-5" data-aos="fade-up" data-aos-duration="1000">
+            <div class="text-center mb-4">
+            <hr class="line-left"> 
+            <h5 class="fw-bold d-inline-block mx-3" style="color: #FF9D3D;">Get in Touch</h5>
+            <hr class="line-right"> 
+            <h1 class="text-muted fw-bold" style="color: black !important;">We’re Here to Help</h1>
+            </div>
+
+            <!-- Formulir Kontak dan Sosial Media -->
+            <div class="row py-5">
+            <!-- Formulir Kontak -->
+            <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-duration="1000">
+                <div class="card p-4">
+                <h4 class="text-center">Contact Us</h4>
+                <form class="contact-form text-center">
+                    <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary  w-25">Send Message</button>
+                </form>
+                </div>
+            </div>
+
+            <!-- Ikon Sosial Media -->
+            <div class="col-lg-6 mb-4 " data-aos="fade-left" data-aos-duration="1000">
+                <h4 class="text-center">Follow Us</h4>
+                    <div class="social-icons text-center py-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 mb-4">
+                                <div class="card card-contact p-3">
+                                    <a href="https://www.facebook.com/" class="text-white text-decoration-none"><i class="fab fa-facebook " style="color: #FF9D3D;"></i></a>
+                                    <h5>Facebook</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card card-contact p-3">
+                                    <a href="https://www.instagram.com/username" class="text-white text-decoration-none"><i class="fab fa-instagram" style="color: #FF9D3D;"></i></a>
+                                    <h5>Instagram</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card card-contact p-3">
+                                    <a href="https://www.twitter.com/yourprofile" class="text-white text-decoration-none"><i class="fab fa-twitter " style="color: #FF9D3D;"></i></a>
+                                    <h5>Twitter</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Informasi Kontak -->
+                        <div class="row text-center">
+                            <div class="col-md-4 mb-4">
+                                <div class="card card-contact p-3 h-100">
+                                   <div class="social-icons">
+                                    <i class="fas fa-phone fa-2x mb-2" style="color: #FF9D3D;"></i>
+                                   </div>
+                                    <h5>Phone</h5>
+                                    <p>+62 23 4576 3451</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card card-contact p-3 h-100">
+                                    <div class="social-icons">
+                                        <i class="fas fa-envelope fa-2x mb-2" style="color: #FF9D3D;"></i>
+                                    </div>
+                                    <h5>Email</h5>
+                                    <p>reseprasaq45@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card card-contact p-3 h-100">
+                                    <div class="social-icons">
+                                        <i class="fas fa-map-marker-alt fa-2x mb-2" style="color: #FF9D3D;"></i>
+                                    </div>
+                                    <h5>Address</h5>
+                                    <p>123 Your Street, City, Country</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+    </main>
+
+
+    <footer class="footer text-white py-5 " style="background-color: #FF9D3D">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- Kolom 1: Slogan -->
+                <div class="col-md-4 mb-4 d-flex flex-column justify-content-center text-center">
+                    <p class="fst-italic text-white">"Rasa yang Terinspirasi, Resep yang Terjaga"</p>
+                    <p class="text-white">Resep Rasa menyajikan cita rasa terbaik dari Indonesia, dengan resep yang otentik dan bahan-bahan berkualitas. Nikmati pengalaman kuliner yang tak terlupakan bersama kami.</p>
+                </div>
+    
+                <!-- Kolom 2-5: Quick Links -->
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold text-white">Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                                <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+                                <li class="mb-2"><a href="#recipes" class="text-white text-decoration-none">Recipes</a></li>
+                                <li class="mb-2"><a href="#gallery" class="text-white text-decoration-none">Gallery</a></li>
+                                <li class="mb-2"><a href="#testimonial" class="text-white text-decoration-none">Testimoni</a></li>
+                                <li class="mb-2"><a href="#faq" class="text-white text-decoration-none">FAQ</a></li>
+                                <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!-- Ulangi struktur untuk kolom 3, 4, dan 5 jika diperlukan -->
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold text-white">Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                                <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+                                <li class="mb-2"><a href="#recipes" class="text-white text-decoration-none">Recipes</a></li>
+                                <li class="mb-2"><a href="#gallery" class="text-white text-decoration-none">Gallery</a></li>
+                                <li class="mb-2"><a href="#testimonial" class="text-white text-decoration-none">Testimoni</a></li>
+                                <li class="mb-2"><a href="#faq" class="text-white text-decoration-none">FAQ</a></li>
+                                <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold text-white">Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                                <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+                                <li class="mb-2"><a href="#recipes" class="text-white text-decoration-none">Recipes</a></li>
+                                <li class="mb-2"><a href="#gallery" class="text-white text-decoration-none">Gallery</a></li>
+                                <li class="mb-2"><a href="#testimonial" class="text-white text-decoration-none">Testimoni</a></li>
+                                <li class="mb-2"><a href="#faq" class="text-white text-decoration-none">FAQ</a></li>
+                                <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <h5 class="fw-bold text-white">Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                                <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+                                <li class="mb-2"><a href="#recipes" class="text-white text-decoration-none">Recipes</a></li>
+                                <li class="mb-2"><a href="#gallery" class="text-white text-decoration-none">Gallery</a></li>
+                                <li class="mb-2"><a href="#testimonial" class="text-white text-decoration-none">Testimoni</a></li>
+                                <li class="mb-2"><a href="#faq" class="text-white text-decoration-none">FAQ</a></li>
+                                <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <hr class="text-white">
+            <div class="text-center">
+                <p class="mb-0 text-white">&copy; 2024 Resep Masakan | All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+   
+     
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+    
+   <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Script font awonsome -->
+    <script src="https://kit.fontawesome.com/bdd45ca51f.js" crossorigin="anonymous"></script>
+     
+    <!-- Script AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>  
+    <!-- bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script> -->
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="js.js"></script>
+</body>
+</html>
